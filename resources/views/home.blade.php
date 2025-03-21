@@ -5,9 +5,22 @@
     h1{
         font-family: "Share Tech Mono", monospace;
     }
+    body{
+        background-image: url("/backg.jpg");
+    }
+    .tit{
+        background-color: white;
+        padding: 5px;
+        border: 1px solid black;
+        border-radius: 10px;
+        width: fit-content;
+        margin: 0 auto;
+    }
 </style>
     <div class="container pb-5">
-        <h1 class="text-center my-5">I treni da oggi in poi</h1>
+        <div class="tit my-5">
+            <h1 class="text-center">I treni da oggi in poi</h1>
+        </div>
         <div class="row">
             @foreach ($trainsFromToday as $train)
             <div class="col-6 my-3">

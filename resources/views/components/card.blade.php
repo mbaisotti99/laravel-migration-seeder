@@ -1,10 +1,11 @@
 <style>
     .trainCard{
         padding: 20px;
-        border: 4px double #000; /* doppia linea */
+        border: 4px double black; /* doppia linea */
         border-radius: 15px;
         text-align: center;
         position: relative;
+        background-color: white;
     }
     .trainCard h3{
         font-size: 30px;
@@ -26,11 +27,6 @@
         align-items: center;
         font-size: 45px;
         opacity: 80%;
-    }
-    .innerCard{
-        width: 90%;
-        height: 90%;
-        border: 1px solid lightgray;
     }
 </style>
 

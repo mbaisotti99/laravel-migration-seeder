@@ -12,8 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('trains', function (Blueprint $table) {
-            $table->created_at = date('d-m-Y H:i:s');
-            $table->updated_at = date('d-m-Y H:i:s');
+            $table->string("codice", 6)->change();
         });
     }
 
@@ -23,8 +22,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('trains', function (Blueprint $table) {
-            $table->dropColumn("created_at");
-            $table->dropColumn("updated_at");
+            $table->bigInteger("codice")->unique()->change();
         });
     }
 };

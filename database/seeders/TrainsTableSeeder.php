@@ -25,7 +25,7 @@ class TrainsTableSeeder extends Seeder
             $newTrain->oraPartenza = $oraPart;
             $newTrain->oraArrivo = $oraArr;
             do {
-                $cod = $faker->numberBetween(1000, 9999);
+                $cod = strtoupper($faker->bothify("??####"));
             } while (Train::where('codice', $cod)->exists());
             $newTrain->codice = $cod;
             $newTrain->nCarrozze = $faker->randomDigit();
