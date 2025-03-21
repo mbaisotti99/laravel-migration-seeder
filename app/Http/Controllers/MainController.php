@@ -8,10 +8,9 @@ use Illuminate\Http\Request;
 class MainController extends Controller
 {
     public function index(){
-        $trains = Train::all();
         $trainsFromToday = Train::whereNowOrFuture("oraPartenza")
         ->orderBy("oraPartenza","asc")
-        ->get();
+        ->paginate(10);
         return view("home",compact("trainsFromToday"));
     }
 }

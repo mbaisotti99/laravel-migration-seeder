@@ -40,5 +40,6 @@
             </div>
             @endforeach
         </div>
+        {{ $trainsFromToday->links('pagination::bootstrap-5') }}
     </div>
 @endsection
