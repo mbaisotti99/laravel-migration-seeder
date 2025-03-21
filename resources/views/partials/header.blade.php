@@ -6,8 +6,18 @@
         display: flex;
         justify-content: center;
         background-color: lightcoral;
+        background-image: url("/head.webp");
+        background-position: 80px -150px;
+        background-size: cover;
+        object-fit: cover;
+    }
+    header h1{
+        font-size: 100px;
+        color: white;
+        -webkit-text-stroke: 3px black;
+        font-family: "Boldonse";
     }
 </style>
 <header>
-    <h1>I treni di oggi</h1>
+    <h1>TrainSpotting</h1>
 </header>
