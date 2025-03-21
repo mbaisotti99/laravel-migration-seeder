@@ -1,6 +1,11 @@
 @vite(["resources/sass/app.scss", "resources/js/app.js"])
 @extends("layouts.master")
 @section("contenuto")
+<style>
+    h1{
+        font-family: "Share Tech Mono", monospace;
+    }
+</style>
     <div class="container pb-5">
         <h1 class="text-center my-5">I treni da oggi in poi</h1>
         <div class="row">

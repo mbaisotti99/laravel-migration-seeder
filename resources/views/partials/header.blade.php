@@ -6,7 +6,7 @@
         display: flex;
         justify-content: center;
         background-color: lightcoral;
-        background-image: url("/head.webp");
+        background-image: url("/head.jpg");
         background-position: 80px -150px;
         background-size: cover;
         object-fit: cover;

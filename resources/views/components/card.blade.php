@@ -45,6 +45,6 @@
         <h3>{{ $parteDa }} --> {{ $arrivaA }}</h3>
         <h4><b>{{ $azienda }} ({{ $codice }})</b></h4>
         <span class="badge fs-5 my-2 <?= $inOrario == "1" ? "text-bg-success" : "text-bg-warning"?>"><?= $inOrario == "1" ? "In orario" : "In ritardo"?></span>
-        <p>Partenza {{ $oraPart }}</p>
-        <p>Arrivo {{ $oraArrivo }}</p>
+        <p>Partenza {{ \Carbon\Carbon::parse($oraPart)->format("d-m-Y H:i") }}</p>
+        <p>Arrivo {{ \Carbon\Carbon::parse($oraArrivo)->format("d-m-Y H:i") }}</p>
     </div>
