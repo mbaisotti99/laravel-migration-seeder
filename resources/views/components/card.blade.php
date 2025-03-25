@@ -43,4 +43,5 @@
         <span class="badge fs-5 my-2 <?= $inOrario == "1" ? "text-bg-success" : "text-bg-warning"?>"><?= $inOrario == "1" ? "In orario" : "In ritardo"?></span>
         <p>Partenza {{ \Carbon\Carbon::parse($oraPart)->format("d-m-Y H:i") }}</p>
         <p>Arrivo {{ \Carbon\Carbon::parse($oraArrivo)->format("d-m-Y H:i") }}</p>
+        <a href="/corsa/{{ $id }}" class="btn btn-primary">Dettagli Corsa</a>
     </div>

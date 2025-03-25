@@ -1,5 +1,5 @@
-@vite(["resources/sass/app.scss", "resources/js/app.js"])
 @extends("layouts.master")
+@section("titolo", "BoolTrains")
 @section("contenuto")
 <style>
     h1{
@@ -15,6 +15,14 @@
         border-radius: 10px;
         width: fit-content;
         margin: 0 auto;
+    }
+    .pagination{
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 10px;
+        width: fit-content;
+        margin: 0 auto;
+        padding: 10px;  
     }
 </style>
     <div class="container pb-5">
@@ -49,10 +57,15 @@
                     <x-slot:codice>
                         {{ $train["codice"] }}
                     </x-slot:codice>
+                    <x-slot:id>
+                        {{ $train["id"] }}
+                    </x-slot:id>
                 </x-card>
             </div>
             @endforeach
         </div>
-        {{ $trainsFromToday->links('pagination::bootstrap-5') }}
+        <div class="pagination">
+            {{ $trainsFromToday->links('pagination::bootstrap-5') }}
+        </div>
     </div>
 @endsection

@@ -1,13 +1,21 @@
 <style>
     footer{
         width: 100%;
-        height: 150px;
+        min-height: 200px;
         background-color: lightcoral;
         padding: 25px 0;
-        display: flex;
-        justify-content: center;
+
+        background-image: url("/head.jpg");
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .thomas{
+        position: absolute;
+        left: 41%;
+        top: -30px;
     }
 </style>
 <footer>
-    <h2>Hai visto i treni da oggi</h2>
+    <img src="/thomas.png" alt="Thomas" width="300" height="200" class="thomas">
 </footer>

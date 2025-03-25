@@ -13,4 +13,9 @@ class MainController extends Controller
         ->paginate(10);
         return view("home",compact("trainsFromToday"));
     }
+
+    public function get($id){
+        $train = Train::findOrFail( $id );  
+        return view("details",compact("train"));
+    }
 }
