@@ -1,5 +1,5 @@
 @extends("layouts.master")
-@section("titolo", "BoolTrains")
+@section("titolo", "Treni Persi")
 @section("contenuto")
 <style>
     h1{
@@ -29,15 +29,16 @@
     .foot{
         display: flex;
         justify-content: space-between;
+        width: 100%;
     }
 </style>
     <div class="container pb-5">
         <div class="tit my-5">
-            <h1 class="text-center">I treni da oggi in poi</h1>
+            <h1 class="text-center">I treni che hai perso</h1>
         </div>
         <div class="row">
-            @foreach ($trainsFromToday as $train)
-            <div class="col-lg-6 col-sm-12 my-3">
+            @foreach ($lostTrains as $train)
+            <div class="col-6 my-3">
                 <x-card>
                     <x-slot:parteDa>
                         {{ $train["stazPartenza"] }}
@@ -71,9 +72,9 @@
             @endforeach
         </div>
         <div class="foot my-5">
-            <a href="/lost" class="btn btn-primary fs-3">Vedi i treni che hai perso</a>
+            <a href="/" class="btn btn-primary fs-2">Torna alla Home</a>
             <div class="paginationCont">
-                {{ $trainsFromToday->links('pagination::bootstrap-5') }}
+                {{ $lostTrains->links('pagination::bootstrap-5') }}
             </div>
         </div>
     </div>

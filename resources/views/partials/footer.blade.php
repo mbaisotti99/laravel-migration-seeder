@@ -12,8 +12,9 @@
     }
     .thomas{
         position: absolute;
-        left: 41%;
-        top: -30px;
+        left: 50%;
+        top: 70px;
+        transform: translate(-50%, -50%);   
     }
 </style>
 <footer>

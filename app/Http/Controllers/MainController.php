@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Train;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class MainController extends Controller
@@ -12,6 +13,12 @@ class MainController extends Controller
         ->orderBy("oraPartenza","asc")
         ->paginate(10);
         return view("home",compact("trainsFromToday"));
+    }
+
+    public function lost(){
+        $lostTrains = Train::where("oraPartenza", "<", Carbon::now())
+        ->paginate(10); 
+        return view("lost", compact("lostTrains"));
     }
 
     public function get($id){

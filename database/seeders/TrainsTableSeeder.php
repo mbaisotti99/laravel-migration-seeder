@@ -16,7 +16,7 @@ class TrainsTableSeeder extends Seeder
     public function run(Faker $faker): void
     {
         for ($i = 0; $i < 100; $i++) {
-            $oraPart = $faker->dateTimeBetween('now', Carbon::now()->endOfYear());
+            $oraPart = $faker->dateTimeBetween('-3 months', Carbon::now()->endOfYear());
             $oraArr = Carbon::instance($oraPart)->addHours(rand(1, 10))->addMinutes(rand(0, 59));
             $newTrain = new Train();
             $newTrain->azienda = $faker->company();

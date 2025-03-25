@@ -26,7 +26,7 @@
     </div>
 @else
     <div class="trainDetCard text-center">
-        <h2>Nome Treno: <br> <b>{{ $nome }}</b></h2>
+        <h2>Capotreno: <br> <b>{{ $nome }}</b></h2>
 
         <h3 class="my-4">Partenza: <br> <b>{{ $parteDa }} </b> {{ \Carbon\Carbon::parse($oraPart)->format("H:i d-m-Y ") }}
             <br> </h3>

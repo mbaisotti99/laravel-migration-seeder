@@ -28,6 +28,10 @@
         font-size: 45px;
         opacity: 80%;
     }
+    button a {
+        text-decoration: none;
+        color: white;   
+    }
 </style>
 
 <div class="trainCard">
@@ -43,5 +47,7 @@
         <span class="badge fs-5 my-2 <?= $inOrario == "1" ? "text-bg-success" : "text-bg-warning"?>"><?= $inOrario == "1" ? "In orario" : "In ritardo"?></span>
         <p>Partenza {{ \Carbon\Carbon::parse($oraPart)->format("d-m-Y H:i") }}</p>
         <p>Arrivo {{ \Carbon\Carbon::parse($oraArrivo)->format("d-m-Y H:i") }}</p>
-        <a href="/corsa/{{ $id }}" class="btn btn-primary">Dettagli Corsa</a>
+        <button class="btn btn-primary fs-3" <?= $cancellato == "1" ? "disabled" : "" ?>>
+            <a href="/corsa/{{ $id }}" >Dettagli Corsa</a>
+        </button>
     </div>
