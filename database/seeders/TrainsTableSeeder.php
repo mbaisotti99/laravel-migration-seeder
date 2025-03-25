@@ -29,9 +29,13 @@ class TrainsTableSeeder extends Seeder
             } while (Train::where('codice', $cod)->exists());
             $newTrain->codice = $cod;
             $newTrain->nCarrozze = $faker->randomDigit();
-            $newTrain->inOrario = $faker->boolean();
+            $inOr = $faker->boolean();
+            $newTrain->inOrario = $inOr;
             $newTrain->cancellato = $faker->boolean(30);
             $newTrain->nome = $faker->name();
+            if (!$inOr){
+                $newTrain->ritardo = rand(1,100);
+            }
             $newTrain->save();
         }
     }

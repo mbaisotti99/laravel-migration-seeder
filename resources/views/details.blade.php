@@ -38,6 +38,12 @@
             <x-slot:id>
                 {{ $train["id"] }}
             </x-slot:id>
+            <x-slot:nome>
+                {{ $train["nome"] }}
+            </x-slot:nome>
+            <x-slot:ritardo>
+                {{ $train["ritardo"] }}
+            </x-slot:ritardo>
         </x-details-card>
     </div>
 @endsection
